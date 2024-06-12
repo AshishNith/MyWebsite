@@ -178,16 +178,16 @@ section.about .social a img{
    margin-bottom:8rem;
     text-align: center;
 }
-section.services{
+section.skills{
     background:var(--light);
 }
-section.services .card-wrapper{
+section.skills .card-wrapper{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap:2rem;
     grid-row-gap:6rem;
 }
-section.services .card-wrapper .card{
+section.skills .card-wrapper .card{
     background:var(--pure);
     padding: 3rem 2rem;
     position:relative;
@@ -199,7 +199,7 @@ section.services .card-wrapper .card{
     -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
 }
-section.services .card-wrapper .card img{
+section.skills .card-wrapper .card img{
     position: absolute;
     top:-3.5rem;
     left:50%;
@@ -209,21 +209,21 @@ section.services .card-wrapper .card img{
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
 }
-section.services .card-wrapper .card h2{
+section.skills .card-wrapper .card h2{
     font-weight: 400;
     font-size: 1.2rem;
     margin-bottom:0.5rem;
 }
-section.services .card-wrapper .card p{
+section.skills .card-wrapper .card p{
     font-family: 'Lato', sans-serif;
     color:var(--ternary);
     line-height:1.6;
 }
 
-section.services .card-wrapper .card:hover{
+section.skills .card-wrapper .card:hover{
     background: var(--dark);  
 }
-section.services .card-wrapper .card:hover h2, section.services .card-wrapper .card:hover p{
+section.skills .card-wrapper .card:hover h2, section.skills .card-wrapper .card:hover p{
     color:var(--pure);
 }
 
@@ -560,7 +560,7 @@ footer .copyright{
     section.about .about-me-img{
         height: 360px;
     }
-    section.services .card-wrapper{
+    section.skills .card-wrapper{
         grid-template-columns: repeat(2, 1fr);
     }
     section.work .card-wrapper{
@@ -605,7 +605,7 @@ footer .copyright{
     section{
         padding: 4rem 0;
     }
-    section.services .card-wrapper{
+    section.skills .card-wrapper{
         grid-template-columns: repeat(1, 1fr);
         margin-top:6rem;
     }
