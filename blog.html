@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="css/blogStyles.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="index.html#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="post">
+            <h2 class="post-title">First Blog Post</h2>
+            <p class="post-content">This is the content of the first blog post. It's an exciting time to start blogging!</p>
+            <button class="like-button" onclick="likePost(this)">Like</button>
+            <span class="like-count">0 Likes</span>
+        </section>
+        
+        <section class="post">
+            <h2 class="post-title">Second Blog Post</h2>
+            <p class="post-content">This is the content of the second blog post. Blogging is getting interesting!</p>
+            <button class="like-button" onclick="likePost(this)">Like</button>
+            <span class="like-count">0 Likes</span>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2024&copy; ficTECH Industries</p>
+    </footer>
+
+    <script src="js/blogScript.js"></script>
+</body>
+</html>

@@ -6,6 +6,11 @@ $('.slider').slick({
     dotsClass:'dots'
 });
 
+// script.js
+
+document.getElementById('modeToggle').addEventListener('click', function() {
+  document.body.classList.toggle('dark-mode');
+});
 
 let hamberger = document.querySelector('.hamberger');
 let times = document.querySelector('.times');

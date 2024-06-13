@@ -12,6 +12,12 @@ body{
     font-family:'Poppins',sans-serif;
 }
 
+/* Dark mode styles */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -244,7 +250,7 @@ section.freelancer p{
     font-family:'Lato', sans-serif;
 }
 
-section.reviews .slider .slide img{
+section.Blogs .slider .slide img{
     width:100px;
     height:100px;
     border-radius: 50%;
@@ -255,7 +261,7 @@ section.reviews .slider .slide img{
     object-fit:cover;
     margin-bottom:2rem;
 }
-section.reviews .slider .slide{
+section.Blogs .slider .slide{
     text-align: center;
     display: flex;
     align-items: center;
@@ -263,24 +269,24 @@ section.reviews .slider .slide{
     padding:0 10rem;
 
 }
-section.reviews .slider .slide p{
+section.Blogs .slider .slide p{
     font-family: 'Lato', sans-serif;
     color:var(--ternary);
     margin-bottom: 1rem;
 }
-section.reviews .slider .slide span{
+section.Blogs .slider .slide span{
     font-size: 0.8rem;
 }
-section.reviews .slider-dots .dots{
+section.Blogs .slider-dots .dots{
     list-style-type:none;
     display:flex!important;
     justify-content: center;
 }
-section.reviews .slider-dots{
+section.Blogs .slider-dots{
     margin-top:3rem;
 }
 
-section.reviews .slider-dots button{
+section.Blogs .slider-dots button{
     font-size:0;
     width:8px;
     height:5px;
@@ -295,7 +301,7 @@ section.reviews .slider-dots button{
     -o-border-radius: 50px;
     cursor: pointer;
 }
-section.reviews .dots li.slick-active button{
+section.Blogs .dots li.slick-active button{
     background:var(--primary);
     width:20px;
 }
@@ -616,7 +622,7 @@ footer .copyright{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 90%, 0 100%);
         padding-bottom: 8rem;
     }
-    section.reviews .slider .slide{
+    section.Blogs .slider .slide{
         padding:0;
     }
     .section-heading + p{
