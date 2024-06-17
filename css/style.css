@@ -250,6 +250,15 @@ section.freelancer p{
     font-family:'Lato', sans-serif;
 }
 
+a, a:link, a:visited {
+    text-decoration: none;
+  }
+  
+  span {
+    text-decoration: none;
+  }
+  
+
 section.Blogs .slider .slide img{
     width:100px;
     height:100px;
