@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Example dynamic content loading
     const docs = [
-        { title: "HTML Basics", description: "Introduction to HTML." },
-        { title: "CSS Fundamentals", description: "Learn the basics of CSS." },
-        { title: "JavaScript Guide", description: "Getting started with JavaScript." }
+        { title: "HTML Basics", description: "Introduction to HTML.", link: "htmlBasics.html" },
+        { title: "CSS Fundamentals", description: "Learn the basics of CSS.", link: "cssFundamentals.html" },
+        { title: "JavaScript Guide", description: "Getting started with JavaScript.", link: "javaScriptGuide.html" }
     ];
 
     const docContainer = document.querySelector(".doc-container");
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
-            <h3>${doc.title}</h3>
+            <h3><a href="${doc.link}" class="doc-link">${doc.title}</a></h3>
             <p>${doc.description}</p>
         `;
         docContainer.appendChild(card);

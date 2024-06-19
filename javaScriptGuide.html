@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Materials</title>
+    <title>JavaScript Guide</title>
     <link rel="icon" type="image/x-icon" href="images/fevicon.ico">
     <link rel="stylesheet" href="css/studyStyles.css">
 </head>
 <body>
     <header>
-        <h1>Study Materials</h1>
+        <h1>JavaScript Guide</h1>
     </header>
     <nav>
         <ul>
@@ -20,20 +20,24 @@
         </ul>
     </nav>
     <main>
-        <section id="home">
-            <h2>Study Materials</h2>
-            <p>Your one-stop solution for educational documentation.</p>
-        </section>
-        <section id="docs">
-            <h2>Docs</h2>
-            <div class="doc-container">
-                <!-- Documentation cards will be dynamically added here -->
-            </div>
+        <section id="javascript-guide">
+            <h2>Getting Started with JavaScript</h2>
+            <p>JavaScript is a programming language that can be used to create dynamic and interactive content on websites.</p>
+            <h3>Basic Example</h3>
+            <pre>
+                <code>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('button').addEventListener('click', function() {
+        alert('Button clicked!');
+    });
+});
+                </code>
+            </pre>
+            <p>Use the above JavaScript code to add interactivity to your web pages.</p>
         </section>
     </main>
     <footer>
         <p>© ficTECH. All rights reserved.</p>
     </footer>
-    <script src="js/studyScript.js"></script>
 </body>
 </html>
