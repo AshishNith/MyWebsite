@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="icon" type="image/x-icon" href="images/fevicon.ico">
+    <link rel="stylesheet" href="css/blogStyles.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="index.html#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="post">
+            <h2 class="post-title">The Rise of AI and Machine Learning</h2>
+            <p class="post-content">Artificial Intelligence (AI) and Machine Learning (ML) are transforming industries by enabling machines to learn from data and make intelligent decisions. From self-driving cars to sophisticated recommendation systems, AI/ML is paving the way for a smarter future.</p>
+            <button class="like-button" onclick="likePost(this)">Like</button>
+            <span class="like-count">0 Likes</span>
+            <button class="read-more-button" onclick="readMore('ai-ml')">Read More</button>
+        </section>
+        
+        <section class="post">
+            <h2 class="post-title">The Future of Robotics</h2>
+            <p class="post-content">Robotics is evolving rapidly, with robots becoming more capable and versatile. Innovations in robotics are improving automation in manufacturing, healthcare, and even everyday life, making tasks easier and more efficient.</p>
+            <button class="like-button" onclick="likePost(this)">Like</button>
+            <span class="like-count">0 Likes</span>
+            <button class="read-more-button" onclick="readMore('robotics')">Read More</button>
+        </section>
+
+        <section class="post">
+            <h2 class="post-title">SpaceX: Revolutionizing Space Travel</h2>
+            <p class="post-content">SpaceX, founded by Elon Musk, is revolutionizing space travel with its reusable rockets and ambitious plans for Mars colonization. Their achievements, such as the Falcon Heavy launch and the Crew Dragon missions, are setting new milestones in space exploration.</p>
+            <button class="like-button" onclick="likePost(this)">Like</button>
+            <span class="like-count">0 Likes</span>
+            <button class="read-more-button" onclick="readMore('spacex')">Read More</button>
+        </section>
+        
+        <section class="post">
+            <h2 class="post-title">Elon Musk: Visionary Entrepreneur</h2>
+            <p class="post-content">Elon Musk is known for his groundbreaking ventures in technology and space exploration. As the CEO of SpaceX and Tesla, Musk's vision and innovations are driving the future of transportation, energy, and interplanetary colonization.</p>
+            <button class="like-button" onclick="likePost(this)">Like</button>
+            <span class="like-count">0 Likes</span>
+            <button class="read-more-button" onclick="readMore('elon-musk')">Read More</button>
+        </section>
+        
+        <section class="post">
+            <h2 class="post-title">NASA's Artemis Program</h2>
+            <p class="post-content">NASA's Artemis program aims to return humans to the Moon by 2024 and establish a sustainable presence by the end of the decade. This mission is a crucial step towards future Mars exploration and advancing our understanding of the Moon.</p>
+            <button class="like-button" onclick="likePost(this)">Like</button>
+            <span class="like-count">0 Likes</span>
+            <button class="read-more-button" onclick="readMore('artemis')">Read More</button>
+        </section>
+        
+        <section class="post">
+            <h2 class="post-title">ISRO: India's Space Ambitions</h2>
+            <p class="post-content">The Indian Space Research Organisation (ISRO) has made significant strides in space technology with missions like Chandrayaan and Mangalyaan. ISRO's efforts are placing India on the global map of space exploration and innovation.</p>
+            <button class="like-button" onclick="likePost(this)">Like</button>
+            <span class="like-count">0 Likes</span>
+            <button class="read-more-button" onclick="readMore('isro')">Read More</button>
+        </section>
+        
+        <section class="post">
+            <h2 class="post-title">DRDO: Advancing Defense Technologies</h2>
+            <p class="post-content">The Defence Research and Development Organisation (DRDO) of India is at the forefront of developing cutting-edge defense technologies. From missiles to cybersecurity, DRDO's innovations are vital for national security and technological advancement.</p>
+            <button class="like-button" onclick="likePost(this)">Like</button>
+            <span class="like-count">0 Likes</span>
+            <button class="read-more-button" onclick="readMore('drdo')">Read More</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© ficTECH. All rights reserved.</p>
+    </footer>
+
+    <div id="readMoreModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-content"></p>
+            <a id="modal-link" href="#" target="_blank">Learn More</a>
+        </div>
+    </div>
+
+    <script src="js/blogScript.js"></script>
+</body>
+</html>
