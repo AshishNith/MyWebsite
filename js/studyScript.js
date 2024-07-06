@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Example dynamic content loading
     const docs = [
-        { title: "HTML Basics", description: "Introduction to HTML.", link: "htmlBasics.html" },
-        { title: "CSS Fundamentals", description: "Learn the basics of CSS.", link: "cssFundamentals.html" },
-        { title: "JavaScript Guide", description: "Getting started with JavaScript.", link: "javaScriptGuide.html" }
+        { title: "Beginer Robotics ", description: "Follow this documentation if you are beginer to Robotics", link: "https://ashishnith.github.io/ficTECH--Docs/" },
+        { title: "CyberSecurity & EthicalHacking", description: "--Documentations will be available soon--", link: "" },
+        { title: "Amazing Projects", description: "--Will be available soon--", link: "" }
     ];
 
     const docContainer = document.querySelector(".doc-container");

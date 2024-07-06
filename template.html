@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L298N Motor Driver - Arduino Documentation</title>
+    <link rel="stylesheet" href="templateStyles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1>ficTECH-Docs</h1>
+            <nav>
+                <ul>
+                    <li><a href="#what-is-arduino">Arduino Docs</a></li>
+                    <li><a href="#l298n-motor-driver">L298N Motor Driver</a></li>
+                    <li><a href="#servo">Servo</a></li>
+                    <li><a href="#ultrasonic-sensor">Ultrasonic Sensor</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <div class="box head">
+                <div class="heading">L298N Motor Driver</div>
+            </div>
+
+            <div class="box">
+                <section id="l298n-motor-driver">
+                    <h2>L298N Motor Driver</h2>
+                    <p>The L298N motor driver is a dual H-Bridge driver that allows you to control the speed and direction of two DC motors or one stepper motor. It can control up to 2A of current per channel, which makes it ideal for driving higher power motors.</p>
+                    <img src="motorDriver.png" alt="L298N Motor Driver">
+                    
+                    <h3>Pin Description</h3>
+                    <ul>
+                        <li><strong>OUT1:</strong> DC motor A + terminal</li>
+                        <li><strong>OUT2:</strong> DC motor A – terminal</li>
+                        <li><strong>OUT3:</strong> DC motor B + terminal</li>
+                        <li><strong>OUT4:</strong> DC motor B – terminal</li>
+                        <li><strong>+12V:</strong> Connect the motor’s power supply</li>
+                        <li><strong>GND:</strong> Power supply GND</li>
+                        <li><strong>+5V:</strong> Provide 5V if the jumper is removed. Acts as a 5V output if jumper is in place</li>
+                        <li><strong>Jumper:</strong> Jumper in place – uses the motor power supply to power up the chip. Jumper removed: you need to provide 5V to the +5V terminal. If you supply more than 12V, remove the jumper</li>
+                    </ul>
+
+                    <h3>Input Pins - Direction of Motor</h3>
+                    <ul>
+                        <li><strong>IN1:</strong> Input 1 for Motor A forward</li>
+                        <li><strong>IN2:</strong> Input 2 for Motor A</li>
+                        <li><strong>IN3:</strong> Input 1 for Motor B</li>
+                        <li><strong>IN4:</strong> Input 2 for Motor B</li>
+                    </ul>
+
+                    <h3>Enable Pins - Speed</h3>
+                    <ul>
+                        <li><strong>EN1:</strong> Enable pin for Motor A</li>
+                        <li><strong>EN2:</strong> Enable pin for Motor B</li>
+                    </ul>
+
+                    <h3>Enable Pins</h3>
+                    <p>The enable pins act as an ON/OFF switch for your motors:</p>
+                    <ul>
+                        <li>If you send a HIGH signal to the enable 1 pin, motor A is ready to be controlled at maximum speed</li>
+                        <li>If you send a LOW signal to the enable 1 pin, motor A turns off</li>
+                        <li>If you send a PWM signal, you can control the speed of the motor. The motor speed is proportional to the duty cycle</li>
+                    </ul>
+
+                    <h3>Connecting to Arduino</h3>
+                    <p>Below is a sample code to connect and control the L298N motor driver with Arduino:</p>
+                    <pre><code class="language-cpp">// Motor A
+int motorPin1 = 9;  // Connect to the input pin 1 of L298N
+int motorPin2 = 10; // Connect to the input pin 2 of L298N
+int enablePinA = 5; // Connect to the enable pin A of L298N
+
+// Motor B
+int motorPin3 = 6;  // Connect to the input pin 3 of L298N
+int motorPin4 = 7;  // Connect to the input pin 4 of L298N
+int enablePinB = 3;  // Connect to the enable pin B of L298N
+
+void setup() {
+  // Motor A setup
+  pinMode(motorPin1, OUTPUT);
+  pinMode(motorPin2, OUTPUT);
+  pinMode(enablePinA, OUTPUT);
+  
+  // Motor B setup
+  pinMode(motorPin3, OUTPUT);
+  pinMode(motorPin4, OUTPUT);
+  pinMode(enablePinB, OUTPUT);
+}
+
+void loop() {
+  // Move forward
+  moveForward();
+  delay(2000);
+
+  // Stop
+  stopMotors();
+  delay(1000);
+
+  // Move backward
+  moveBackward();
+  delay(2000);
+
+  // Stop
+  stopMotors();
+  delay(1000);
+}
+
+void moveForward() {
+  digitalWrite(motorPin1, HIGH);
+  digitalWrite(motorPin2, LOW);
+  analogWrite(enablePinA, 255);  // Adjust the speed (0 to 255)
+
+  digitalWrite(motorPin3, HIGH);
+  digitalWrite(motorPin4, LOW);
+  analogWrite(enablePinB, 255);  // Adjust the speed (0 to 255)
+}
+
+void moveBackward() {
+  digitalWrite(motorPin1, LOW);
+  digitalWrite(motorPin2, HIGH);
+  analogWrite(enablePinA, 255);  // Adjust the speed (0 to 255)
+
+  digitalWrite(motorPin3, LOW);
+  digitalWrite(motorPin4, HIGH);
+  analogWrite(enablePinB, 255);  // Adjust the speed (0 to 255)
+}
+
+void stopMotors() {
+  digitalWrite(motorPin1, LOW);
+  digitalWrite(motorPin2, LOW);
+  analogWrite(enablePinA, 0);
+
+  digitalWrite(motorPin3, LOW);
+  digitalWrite(motorPin4, LOW);
+  analogWrite(enablePinB, 0);
+}</code></pre>
+
+                    <h3>Additional Tips</h3>
+                    <ul>
+                        <li>Ensure you remove the jumper if you are supplying more than 12V to avoid damaging the motor driver.</li>
+                        <li>Use a separate power supply for your motors to avoid drawing too much current from the Arduino.</li>
+                        <li>Experiment with different PWM values to control the speed of your motors effectively.</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+        <aside class="toc">
+            <h2>On this page</h2>
+            <nav>
+                <ul>
+                    <li><a href="#l298n-motor-driver">L298N Motor Driver</a></li>
+                    <li><a href="#pin-description">Pin Description</a></li>
+                    <li><a href="#input-pins">Input Pins</a></li>
+                    <li><a href="#enable-pins">Enable Pins</a></li>
+                    <li><a href="#connecting-to-arduino">Connecting to Arduino</a></li>
+                    <li><a href="#additional-tips">Additional Tips</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
