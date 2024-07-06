@@ -119,7 +119,9 @@ header button{
 
     display: flex;
 }
-
+header i{
+  color: rgb(226, 225, 225);
+}
 
 
 
@@ -127,29 +129,33 @@ header button{
 
 
 button{
-    font-size: 17px;
-    padding: 0 9px;
-    background-color: var(--bg);
-    color: white;
+    padding: 2px 9px;
+    background-color: var(--bg);    
     border-radius: 10px;
-    border: solid var(--primaryColor) 0.01px;
+    border: solid var(--text) 3px;
     transition-duration: 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px;
 }
 
 button a{
-    text-decoration: none;
-    color: white;
+  font-size: 1.5vw ;
+  padding: 5px;
+  text-decoration: none;
+  color: var(--color3);
 }
 
 button:hover{
     border-color: var(--primaryColor);
-    background-color: var(--bg);
+    background-color: var(--color3);
     color: var(--secondary-text);
     font-size: 25px;
+}
+button:hover a{
+  font-size: 1.6vw;
+  box-shadow: 2px , white ;
+  
 }
 
 
@@ -174,6 +180,10 @@ button:hover{
     height: 100%;
     /* background-color: green; */
     
+}
+
+.leftSection button i{
+  font-size: 0.5rem;
 }
 
 .home-container{
@@ -300,8 +310,8 @@ button:hover{
 }
 
 .about-me .text-content .social a i{
-    width: 10px;
-    padding: 10px;
+  font-size: 0.7rem;
+  padding: 10px;
     transition-duration: 0.3s;
     border-radius: 50%;
     border: solid 1px var(--color3);
@@ -683,161 +693,128 @@ button:hover{
 }
 
 .page3-heading{
-    text-align: center;
-    /* background-color: #fff; */
-    padding-bottom: 50px;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
 }
-
 .page3-heading h1{
-    font-size: 6rem;
-    transition-duration: 0.3s;
+  font-family: sans-serif;
+  font-size: 4rem;
+  position: relative;
+}
+.page3-heading h1::after{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 10px;
+  background-color: white;
+  bottom: 0%;
+  left: 0%;
+  
+}
+.page3-heading:hover h1::after{
+  animation-name:text-Underline-animation;
+  animation-duration: 1s;
 }
 
-.page3-heading h1:hover{
-    transition-duration: 0.3s;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    font-size: 7rem;
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+section.contacts{
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.contacts-container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contacts-heading{
+  color: white;
+  height: 20vh;
+  font-size: 8vw;
+  text-align: center;
+}
+.contacts-left{
+  width: 50%;
+  height: 80%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+
+.form-control, 
+textarea {
+  width: 40vw;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 0.5rem;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-horizontal{
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+.form-group{
+  gap: 50vh;
+} 
+#message-box{
+  height: 150px;
+}
+
+
+.contacts-right{
+  width: 30%;
+  height: 80%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.contact-list{
+  color: wheat;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 
 
 
-#contact {
-    width: 100%;
-    height: 100%;
-  }
-  .contact-heading{
-    height: 13vw;
-  }
-  .section-header {
-    text-align: center;
-    margin: 0 auto;
-    padding: 40px 0;
-    font: 300 10vw roberto;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-  }
-  
-  .contact-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 20px;
-    position: relative;
-    max-width: 1000px;
-  }
-  
-  /* Left contact page */
-  .form-horizontal{
-    margin-top: 50px;
-    font-family: 'Lato';
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
 
-  
-  .form-control, 
-  textarea {
-    width: 400px;
-    height: 60px;
-    border-radius: 10px;
-    background-color: #000;
-    color: #fff;
-    letter-spacing: 1px;
-    font-size: 0.5rem;
-    /* font-size: 0.8rem; */
-  }
-
- #message-box{
-    height: auto;
- }
-  
-  .send-button {
-    margin-top: 15px;
-    height: 80px;
-    width: 400px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .2s ease-in-out;
-  }
-  
-  .alt-send-button {
-    width: 400px;
-    height: 34px;
-    transition: all .2s ease-in-out;
-  }
-  
-  .send-text {
-    display: block;
-    margin-top: 10px;
-    font: 700 12px 'Lato', sans-serif;
-    letter-spacing: 2px;
-  }
-  
-  .send-button:hover .alt-send-button{
-    transform: translate3d(0px, -29px, 0px);
-  }
-  
-  /* Begin Right Contact Page */
-  .direct-contact-container {
-    max-width: 400px;
-    margin-top :5vw;
-  }
-  .direct-contact-container i{
-    font-size: 1rem;
-  }
-  /* Location, Phone, Email Section */
-  .contact-list {
-    list-style-type: none;
-    /* margin-left: -30px; */
-    /* padding-right: 20px; */
-    display: flex;
-    flex-direction: column;
-    
-  }
-  
-  .list-item {
-    line-height: 1;
-    color: #aaa;
-    padding:10px 0;
-  }
-  
-  .contact-text {
-    font: 300 25px 'Lato', sans-serif;
-    letter-spacing: 1.9px;
-    color: #bbb;
-  }
-  
-  .place {
-    margin-left: 62px;
-  }
-  
-  .phone {
-    margin-left: 56px;
-  }
-  
-  .gmail {
-    margin-left: 53px;
-  }
-  
-  .contact-text a {
-    color: #bbb;
-    text-decoration: none;
-    transition-duration: 0.2s;
-  }
-  
-  .contact-text a:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  
   /* Social Media Icons */
 
 
