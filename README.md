@@ -70,6 +70,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 If you have any questions or comments, you can reach me at:
 
-- **Email:** [your-email@example.com](mailto:your-email@example.com)
+- **Email:** [ranjan.ashish9992@gmail.com](mailto:ranjan.ashish9992@gmail.com)
 - **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile/)
 - **GitHub:** [AshishNith](https://github.com/AshishNith)
