@@ -71,5 +71,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you have any questions or comments, you can reach me at:
 
 - **Email:** [ranjan.ashish9992@gmail.com](mailto:ranjan.ashish9992@gmail.com)
-- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile/)
+- **LinkedIn:** [Ashish Ranjan]([https://www.linkedin.com/in/your-profile/](https://www.linkedin.com/in/fictech/))
 - **GitHub:** [AshishNith](https://github.com/AshishNith)
