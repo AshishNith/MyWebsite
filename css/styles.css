@@ -126,35 +126,35 @@ header i{
 
 /*                Buttons            */
 
-
 button{
-    padding: 2px 9px;
-    background-color: var(--bg);    
-    border-radius: 10px;
-    border: solid var(--text) 3px;
-    transition-duration: 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 2px 9px;
+  background-color: var(--bg);    
+  border-radius: 10px;
+  border: solid var(--text) 3px;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button a{
-  font-size: 1.5vw ;
-  padding: 5px;
-  text-decoration: none;
-  color: var(--color3);
+font-size: 1.5vw ;
+padding: 5px;
+text-decoration: none;
+color: var(--color3);
 }
 
 button:hover{
-    border-color: var(--primaryColor);
-    background-color: var(--color3);
-    color: var(--secondary-text);
-    font-size: 25px;
+  border-color: var(--primaryColor);
+  background-color: var(--color3  );
+  font-size: 25px;
 }
 button:hover a{
-  font-size: 1.6vw;
-  box-shadow: 2px , white ;
-  
+/* font-size: 1.6vw; */
+box-shadow: 2px , white ;
+  color: white;
+
+
 }
 
 
