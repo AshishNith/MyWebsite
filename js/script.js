@@ -3,12 +3,12 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     var typed = new Typed('#element', {
-        strings: ['AI/ML Engineer','Robotics Engineer','Ethical Hacker'],
+        strings: ['AI/ML Enthusiast ','Robotics Engineer','ROS Expert','Full-Stack Developer'],
         typeSpeed: 80,
         backSpeed: 50, // Speed at which the text is deleted
         loop: true // Enable looping
     });
-});
+});e
 
 // typing animation -- aboutPage
 
